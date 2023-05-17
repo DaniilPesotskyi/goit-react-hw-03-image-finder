@@ -2,21 +2,20 @@ import React, { Component } from 'react';
 import css from './Modal.module.css';
 
 class Modal extends Component {
+
+    onEscClick = e => {
+        if (e.key === 'Escape') {
+            console.log(e.code)
+            this.props.onToggle();
+        }
+    }
+
     componentDidMount() {
-        window.addEventListener('keydown', e => {
-            if (e.key === 'Escape') {
-                console.log(e.code)
-                this.props.onToggle();
-            }
-        });
+        window.addEventListener('keydown', e => this.onEscClick(e));
     }
 
     componentWillUnmount() {
-        window.addEventListener('keydown', e => {
-            if (e.key === 'Escape') {
-                this.props.onToggle();
-            }
-        });
+        window.removeEventListener('keydown', e => this.onEscClick(e));
     }
     
     render() {
