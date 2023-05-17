@@ -21,7 +21,7 @@ class Modal extends Component {
     render() {
         if (this.props.isOpen) {
             return (
-                <div className={css.Overlay}>
+                <div className={css.LoaderOverlay}>
                     <div className={css.Modal}>
                         <img src={this.props.imageURL} alt="img" />
                     </div>
