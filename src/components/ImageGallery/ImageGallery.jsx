@@ -23,12 +23,12 @@ class ImageGallery extends Component {
         }));
     };
 
-    fetchImages = async (query) => {
+    fetchImages = async (query, page) => {
         try {
 
             this.setState({inLoad: true})
             const response = await fetch(
-                `https://pixabay.com/api/?q=${query}&page=${this.state.page}&key=35032978-dd517b2e1f79f34a9f05731b1&image_type=photo&orientation=horizontal&per_page=12`
+                `https://pixabay.com/api/?q=${query}&page=${page}&key=35032978-dd517b2e1f79f34a9f05731b1&image_type=photo&orientation=horizontal&per_page=12`
             );
             const images = await response.json();
             this.setState({inLoad: false})
