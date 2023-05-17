@@ -4,7 +4,7 @@ import css from './Modal.module.css';
 class Modal extends Component {
     onEscClick = e => {
         if (e.key === 'Escape') {
-            console.log(e.code);
+            // console.log(e.code);
             this.props.onToggle();
         }
     };
