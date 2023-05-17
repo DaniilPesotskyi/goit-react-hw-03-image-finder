@@ -11,11 +11,11 @@ class Modal extends Component {
     }
 
     componentDidMount() {
-        window.addEventListener('keydown', e => this.onEscClick(e));
+        window.addEventListener('keydown', this.onEscClick);
     }
 
     componentWillUnmount() {
-        window.removeEventListener('keydown', e => this.onEscClick(e));
+        window.removeEventListener('keydown',  this.onEscClick);
     }
     
     render() {
