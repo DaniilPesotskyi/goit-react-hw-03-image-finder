@@ -5,18 +5,19 @@ class Modal extends Component {
     componentDidMount() {
         window.addEventListener('keydown', e => {
             if (e.code === 'Escape') {
+                console.log(e.code)
                 this.props.onToggle();
             }
         });
     }
 
-    componentWillUnmount() {
-        window.addEventListener('keydown', e => {
-            if (e.code === 'Escape') {
-                this.props.onToggle();
-            }
-        });
-    }
+    // componentWillUnmount() {
+    //     window.addEventListener('keydown', e => {
+    //         if (e.code === 'Escape') {
+    //             this.props.onToggle();
+    //         }
+    //     });
+    // }
     
     render() {
         if (this.props.isOpen) {
