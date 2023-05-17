@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import css from './Searchbar.module.css';
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 class Searchbar extends Component {
     state = {
@@ -15,7 +15,7 @@ class Searchbar extends Component {
         e.preventDefault();
 
         if (this.state.searchQuery.trim() === '') {
-            // toast.error('The search field is empty!');
+            toast.error('The search field is empty!');
             return;
         }
 
