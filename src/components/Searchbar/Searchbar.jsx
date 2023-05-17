@@ -23,8 +23,8 @@ class Searchbar extends Component {
     };
     render() {
         return (
-            <header className={css.pageHeader} onSubmit={this.onFormSubmit}>
-                <form className={css.SearchForm}>
+            <header className={css.pageHeader}>
+                <form className={css.SearchForm} onSubmit={this.onFormSubmit}>
                     <input
                         className={css.SearchFormInput}
                         type="text"
