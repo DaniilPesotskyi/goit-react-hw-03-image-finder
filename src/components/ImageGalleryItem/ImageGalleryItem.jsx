@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import css from './ImageGalleryItem.module.css';
-// import Modal from '../Modal/Modal';
+import Modal from '../Modal/Modal';
 
 class ImageGalleryItem extends Component {
     state = {
@@ -12,10 +12,8 @@ class ImageGalleryItem extends Component {
     };
 
     closeModal = () => {
-        this.setState({isModalOpen: false})
-    }
-
-    componentDidMount() {}
+        this.setState({ isModalOpen: false });
+    };
 
     render() {
         return (
@@ -28,11 +26,11 @@ class ImageGalleryItem extends Component {
                     src={this.props.imageURL}
                     alt="img"
                 />
-                {/* <Modal
+                <Modal
                     imageURL={this.props.largeImageURL}
                     isOpen={this.state.isModalOpen}
                     onToggle={this.closeModal}
-                /> */}
+                />
             </li>
         );
     }
