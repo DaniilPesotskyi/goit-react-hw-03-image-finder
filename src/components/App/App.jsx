@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 import Searchbar from '../Searchbar/Searchbar';
 import ImageGallery from '../ImageGallery/ImageGallery';
 
@@ -18,7 +18,7 @@ class App extends Component {
             <>
                 <Searchbar onSubmit={this.onSetSearchQuery} />
                 <ImageGallery query={this.state.searchQuery}/>
-                <ToastContainer autoClose={2500}/>
+                {/* <ToastContainer autoClose={2500}/> */}
             </>
         );
     }
