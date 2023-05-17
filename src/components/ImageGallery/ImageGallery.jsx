@@ -23,7 +23,7 @@ class ImageGallery extends Component {
         }));
     };
 
-    fetchImages = async (query, page) => {
+    fetchImages = async (query) => {
         try {
 
             this.setState({inLoad: true})
