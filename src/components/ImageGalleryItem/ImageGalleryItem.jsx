@@ -19,9 +19,9 @@ class ImageGalleryItem extends Component {
         return (
             <li
                 className={css.galleryItem}
-                onClick={() => this.onModalToggle()}
             >
                 <img
+                    onClick={() => this.onModalToggle()}
                     className={css.galleryItemImage}
                     src={this.props.imageURL}
                     alt="img"

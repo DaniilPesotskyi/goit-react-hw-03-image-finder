@@ -9,6 +9,13 @@ class Modal extends Component {
         }
     };
 
+    onBackdropClick = e => {
+        const backdrop = document.querySelector('[data-backdrop]');
+        if (backdrop === e.target) {
+            this.props.onToggle();
+        }
+    };
+
     componentDidMount() {
         window.addEventListener('keydown', this.onEscClick);
     }
@@ -20,7 +27,11 @@ class Modal extends Component {
     render() {
         if (this.props.isOpen) {
             return (
-                <div className={css.Overlay}>
+                <div
+                    className={css.Overlay}
+                    onClick={this.onBackdropClick}
+                    data-backdrop
+                >
                     <div className={css.Modal}>
                         <img src={this.props.imageURL} alt="img" />
                     </div>
